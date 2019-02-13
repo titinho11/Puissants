@@ -1,0 +1,16 @@
+
+gp_user_dashboard:
+    path:     tableau-de-bord
+    defaults:
+        _controller: GPUserBundle:Dashbord:dashbord
+
+login:
+    path: /login
+    defaults:
+        _controller: GPUserBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

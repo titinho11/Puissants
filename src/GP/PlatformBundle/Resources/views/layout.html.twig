@@ -1,0 +1,184 @@
+{# src/GP/PlatformBundle/Resources/views/layout.html.twig #}
+{% extends '::layout.html.twig' %}
+
+
+{% block stylesheets %}
+    {{parent()}}
+    {% stylesheets filter='cssrewrite, scssphp'
+      'bundles/gpplatform/assets/css/styles.css'
+      'bundles/gpplatform/assets/css/custom.css'
+
+     %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    {% endstylesheets %}
+{% endblock %}
+
+{% block header %}
+
+    <!-- Loader -->
+
+    <div>
+        <div class="container-fluid fixed-top bg-white">
+          {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+          <nav id="navigation" class="navigation navigation-justified fixed-top navigation-transparent">
+            <div class="container">
+              <div class="navigation-header">
+                <div class="navigation-brand-text">
+                  <a href="{{path('gp_platform_homepage')}}">educ-puissants.com</a>
+                </div>
+                <div class="navigation-button-toggler">
+                  <i class="hamburger-icon"></i>
+                </div>
+              </div>
+              <div class="navigation-body">
+                <div class="navigation-body-header">
+                  <div class="navigation-brand-text">
+                    <a href="{{path('gp_platform_homepage')}}">educ-puissants.com</a>
+                  </div>
+                  <span class="navigation-body-close-button">&#10005;</span>
+                </div>
+                <ul class="navigation-menu">
+                  <li class="navigation-item is-active">
+                    <a class="navigation-link" href="{{path('gp_platform_homepage')}}">TDS</a>
+                  </li>
+
+
+                  <li class="navigation-item">
+                    <a class="navigation-link" href="{{path('gp_platform_contact_msg')}}">Contact</a>
+                  </li>
+
+                </ul>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bonjour {{app.user.firstname}}
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" type="button" href="{{ path('fos_user_profile_show') }}"> Mon Profil</a>
+
+                      <a class="dropdown-item" type="button" href="{{ path('fos_user_security_logout') }}"> Se déconnecter</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+
+
+          {% else %}
+          <!-- Nav -->
+      		<nav id="navigation" class="navigation navigation-justified fixed-top navigation-transparent">
+      			<div class="container">
+      				<div class="navigation-header">
+      					<div class="navigation-brand-text">
+      						<a href="{{path('gp_platform_homepage')}}">educ-puissants.com</a>
+      					</div>
+      					<div class="navigation-button-toggler">
+      						<i class="hamburger-icon"></i>
+      					</div>
+      				</div>
+      				<div class="navigation-body">
+      					<div class="navigation-body-header">
+      						<div class="navigation-brand-text">
+      							<a href="{{path('gp_platform_homepage')}}">educ-puissants.com</a>
+      						</div>
+      						<span class="navigation-body-close-button">&#10005;</span>
+      					</div>
+                <ul class="navigation-menu">
+                  <li class="navigation-item is-active">
+                    <a class="navigation-link" href="{{path('gp_platform_homepage')}}">TDS</a>
+                  </li>
+
+                  <li class="navigation-item">
+                    <a class="navigation-link" href="{{path('gp_platform_contact_msg')}}">Contact</a>
+                  </li>
+
+                </ul>
+      					<div class="navigation-body-section">
+      						<a class="btn btn-primary" href="{{ path('fos_user_registration_register') }}" role="button">Créer un Compte</a>
+      					</div>
+                <div class="navigation-body-section">
+      						<a class="btn btn-primary" href="{{ path('fos_user_security_login') }}" role="button">Connexion</a>
+      					</div>
+      				</div>
+      			</div>
+      		</nav>
+
+
+        {% endif %}
+        </div>
+
+    </div>
+
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+{% endblock %}
+
+{% block footer %}
+<div class="container">
+      <div class="row">
+        <div class="col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center">
+
+          <ul>
+            <li><a class="footer-item-title" href="#"> Qui sommes nous ?</a> </li>
+            <li><a class="footer-item-title" href="#"> Notre mission</a> </li>
+            <li><a class="footer-item-title" href="#"> Nos valeurs </a> </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center">
+          <div>
+            <p class="footer-item-title"><b>Une question ?</b></p>
+            <a href="mailto:hello@educ-puissants.com">hello@educ-puissants.com</a>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center">
+          <div>
+            <p class="footer-item-title"><b>Télephone</b></p>
+            <p>+237 6 91 91 29 25</p>
+          </div>
+        </div>
+        <div class="col-lg-3 d-flex justify-content-center">
+          <div>
+            <p class="footer-item-title"><b>Nous suivre</b></p>
+            <ul class="nav nav-social text-center justify-content-center justify-content-lg-start">
+
+              <li class="nav-item">
+                <a class="nav-link pl-0 pr-2" href="https://www.facebook.com/Groupe-LES-Puissants-1552177561753698/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+{% block javascript %}
+      {{parent()}}
+      {% javascripts filter='jsqueeze'
+        'bundles/gpplatform/assets/js/imagesloaded.pkgd.min.js'
+        'bundles/gpplatform/assets/bootstrap/js/bootstrap.bundle.min.js'
+        'bundles/gpplatform/assets/js/jquery.validate.min.js'
+        'bundles/gpplatform/assets/js/additional-methods.min.js'
+        'bundles/gpplatform/assets/js/navigation.min.js'
+        'bundles/gpplatform/assets/js/main.js'
+        'bundles/gpplatform/assets/js/custom.js'
+        'bundles/gpplatform/js/custom.js'
+       %}
+          <script type="text/javascript" src="{{ asset_url }}"></script>
+     {% endjavascripts %}
+{% endblock %}

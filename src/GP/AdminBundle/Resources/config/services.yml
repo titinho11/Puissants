@@ -1,0 +1,4 @@
+services:
+#    gp_admin.example:
+#        class: GP\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

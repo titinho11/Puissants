@@ -1,0 +1,36 @@
+{# src/GP/PlatformBundle/Resources/views/Course/form.html.twig #}
+
+<div class="container-fluid">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
+
+  {# Génération du label + error + widget pour un champ. #}
+  <div class="row">
+   <div class="form-group col-sm-6">
+     {{ form_label(form.sectorName, "Nom du departement", {'label_attr': {'class': 'control-label'}}) }}
+     {{ form_errors(form.sectorName) }}
+     {{ form_widget(form.sectorName, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group col-sm-6">
+      {{ form_label(form.sectorCode, "Code du departement", {'label_attr': {'class': 'control-label'}}) }}
+      {{ form_errors(form.sectorCode) }}
+      {{ form_widget(form.sectorCode, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+  {# bouton de soumission #}
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="form-group">
+        <div class="col-md-12">
+       <input type="submit" value="Enregistrer le departement" class="btn btn-primary" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+</div>

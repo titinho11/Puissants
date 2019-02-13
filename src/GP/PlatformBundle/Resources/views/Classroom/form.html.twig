@@ -1,0 +1,46 @@
+{# src/GP/PlatformBundle/Resources/views/Classroom/form.html.twig #}
+
+<div class="container-fluid">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
+
+  {# Génération du label + error + widget pour un champ. #}
+  <div class="row">
+   <div class="form-group col-sm-4">
+     {{ form_label(form.groupName, "Nom du Groupe", {'label_attr': {'class': 'control-label'}}) }}
+     {{ form_errors(form.groupName) }}
+     {{ form_widget(form.groupName, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group col-sm-4">
+      {{ form_label(form.sector, "Filière", {'label_attr': {'class': 'control-label'}}) }}
+      {{ form_errors(form.sector) }}
+      {{ form_widget(form.sector, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group col-sm-4">
+      {{ form_label(form.level, "Niveau", {'label_attr': {'class': 'control-label'}}) }}
+      {{ form_errors(form.level) }}
+      {{ form_widget(form.level, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+
+
+
+  {# bouton de soumission #}
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="form-group">
+        <div class="col-md-12">
+       <input type="submit" value="Publier la nouvelle classe" class="btn btn-primary" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+</div>

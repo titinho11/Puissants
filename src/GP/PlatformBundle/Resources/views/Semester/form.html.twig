@@ -1,0 +1,52 @@
+{# src/GP/PlatformBundle/Resources/views/Semester/form.html.twig #}
+
+<div class="container-fluid">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {# Les erreurs générales du formulaire. #}
+  {{ form_errors(form) }}
+
+  {# Génération du label + error + widget pour un champ. #}
+
+  <div class="row justify-content-sm-center">
+    <div class="form-group col-sm-8 justify-content-sm-center">
+      {{ form_label(form.semesterName, "Nom du Semestre", {'label_attr': {'class': 'control-label'}}) }}
+      {{ form_errors(form.semesterName) }}
+      {{ form_widget(form.semesterName, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+  <div class="row justify-content-sm-center">
+   <div class="form-group col-sm-5">
+     {{ form_label(form.startDate, "Debut des cours", {'label_attr': {'class': 'control-label'}}) }}
+     {{ form_errors(form.startDate) }}
+     {{ form_widget(form.startDate, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <div class="form-group col-sm-5">
+      {{ form_label(form.endDate, "Fin des cours", {'label_attr': {'class': 'control-label'}}) }}
+      {{ form_errors(form.endDate) }}
+      {{ form_widget(form.endDate, {'attr': {'class': 'form-control'}}) }}
+    </div>
+  </div>
+
+
+
+
+  {# bouton de soumission #}
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="form-group">
+        <div class="col-md-12">
+       <input type="submit" value="Créer le Semestre" class="btn btn-primary" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  {# Fermeture de la balise <form> du formulaire HTML #}
+  {{ form_end(form) }}
+</div>

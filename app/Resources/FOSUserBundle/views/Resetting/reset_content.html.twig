@@ -1,0 +1,37 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<header id="home" class="section pb-0 ">
+
+    <div class="header-text section text-white text-center pb-3 pt-0">
+
+    </div>
+
+</header>
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <span class="login100-form-title login100-form-title-request-email p-t-70 p-b-60">
+                  Renseignez et confirmez votre nouveau mot de passe.
+      </span>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid">
+  {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+      <div class="row justify-content-center">
+        <div class="col-sm-6 justify-content-center p-b-60">
+          {{ form_widget(form) }}
+        </div>
+      </div>
+
+      <div class="row justify-content-center m-b-60">
+        <div class="container-login100-form-btn col-sm-6 ">
+            <input class="login100-form-btn" type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+        </div>
+      </div>
+
+  {{ form_end(form) }}
+</div>

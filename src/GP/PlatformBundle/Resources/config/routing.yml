@@ -1,0 +1,93 @@
+# index page
+gp_platform_homepage:
+    path:     /
+    defaults: { _controller: GPPlatformBundle:Default:index }
+
+gp_platform_contact_msg:
+    path:     /contact
+    defaults:
+        _controller: GPPlatformBundle:Default:contact
+
+# Add, update and delete a Semester
+gp_platform_add_semester:
+    path:     semester/add
+    defaults:
+        _controller: GPPlatformBundle:Semester:addSemester
+
+gp_platform_update_semester:
+    path:     semester/update/{id}
+    defaults:
+        _controller: GPPlatformBundle:Semester:updateSemester
+
+gp_platform_delete_semester:
+    path:     semester/delete/{id}
+    defaults:
+        _controller: GPPlatformBundle:Semester:deleteSemester
+
+gp_platform_get_semesters:
+    path:     semester/list-semesters
+    defaults:
+        _controller: GPPlatformBundle:Semester:getSemesters
+
+# Add, update and delete a Classroom
+gp_platform_add_classroom:
+    path:     classroom/add/
+    defaults:
+        _controller: GPPlatformBundle:Classroom:addClassroom
+
+gp_platform_update_classroom:
+    path:     classroom/update/{id}  # id represent the semester because each classroom belong to a semester
+    defaults:
+        _controller: GPPlatformBundle:Classroom:updateClassroom
+
+gp_platform_delete_classroom:
+    path:     classroom/delete/{id}
+    defaults:
+        _controller: GPPlatformBundle:Classroom:deleteClassroom
+
+gp_platform_get_classrooms:
+    path:     classroom/list-classrooms
+    defaults:
+        _controller: GPPlatformBundle:Classroom:getClassrooms
+
+# Add, update and delete a Course
+gp_platform_add_course:
+    path:     course/add/  # id represent de classroom beacause each course belong to a classroom
+    defaults:
+        _controller: GPPlatformBundle:Course:addCourse
+
+gp_platform_update_course:
+    path:     course/update/{id}
+    defaults:
+        _controller: GPPlatformBundle:Course:updateCourse
+
+gp_platform_delete_course:
+    path:     course/delete/{id}
+    defaults:
+        _controller: GPPlatformBundle:Course:deleteCourse
+
+gp_platform_get_courses:
+    path:     course/list-courses
+    defaults:
+        _controller: GPPlatformBundle:Course:getCourses
+
+# Add, update and delete a Sector
+gp_platform_add_sector:
+    path:     sector/add/  # id represent de classroom beacause each course belong to a classroom
+    defaults:
+        _controller: GPPlatformBundle:Sector:addSector
+
+gp_platform_update_sector:
+    path:     sector/update/{id}
+    defaults:
+        _controller: GPPlatformBundle:Sector:updateSector
+
+gp_platform_delete_sector:
+    path:     sector/delete/{id}
+    defaults:
+        _controller: GPPlatformBundle:Sector:deleteSector
+
+gp_platform_get_sectors:
+    path:     sector/list-sectors
+    defaults:
+        _controller: GPPlatformBundle:Sector:getSectors

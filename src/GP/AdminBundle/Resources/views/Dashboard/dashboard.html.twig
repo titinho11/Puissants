@@ -1,0 +1,217 @@
+
+{% extends 'GPAdminBundle::layout.html.twig' %}
+
+{% block content %}
+
+<div class="content-page">
+
+<!-- Start content -->
+    <div class="content">
+
+  <div class="container-fluid">
+
+        <div class="row">
+              <div class="col-xl-12">
+                  <div class="breadcrumb-holder">
+                      <h1 class="main-title float-left">Dashboard</h1>
+                      <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                      </ol>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+        </div>
+        <!-- end row -->
+      {% for message in app.flashes('notice') %}
+        <div class="alert  alert-success" role="alert">
+								  <strong>{{ message }}</strong>
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>
+        </div>
+      {% endfor %}
+
+
+          <div class="row">
+              <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card-box noradius noborder bg-default">
+                      <i class="fa fa-file-text-o float-right text-white"></i>
+                      <h6 class="text-white text-uppercase m-b-20">Orders</h6>
+                      <h1 class="m-b-20 text-white counter">1,587</h1>
+                      <span class="text-white">15 New Orders</span>
+                  </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card-box noradius noborder bg-warning">
+                      <i class="fa fa-bar-chart float-right text-white"></i>
+                      <h6 class="text-white text-uppercase m-b-20">Visitors</h6>
+                      <h1 class="m-b-20 text-white counter">250</h1>
+                      <span class="text-white">Bounce rate: 25%</span>
+                  </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card-box noradius noborder bg-info">
+                      <i class="fa fa-user-o float-right text-white"></i>
+                      <h6 class="text-white text-uppercase m-b-20">Users</h6>
+                      <h1 class="m-b-20 text-white counter">120</h1>
+                      <span class="text-white">25 New Users</span>
+                  </div>
+              </div>
+
+              <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                  <div class="card-box noradius noborder bg-danger">
+                      <i class="fa fa-bell-o float-right text-white"></i>
+                      <h6 class="text-white text-uppercase m-b-20">Alerts</h6>
+                      <h1 class="m-b-20 text-white counter">58</h1>
+                      <span class="text-white">5 New Alerts</span>
+                  </div>
+              </div>
+          </div>
+          <!-- end row -->
+
+
+
+
+          <!-- end row -->
+
+
+          <div class="row">
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h3><i class="fa fa-users"></i> Staff details</h3>
+                    Informations sur l'ensemble du staff du groupe (Equipe de coordination, Enseignants, Délégués).
+                  </div>
+
+                  <div class="card-body">
+
+                    <table id="example1" class="table table-bordered table-responsive-xl table-hover display">
+                      <thead>
+                        <tr>
+                          <th>Noms</th>
+                          <th>Position</th>
+                          <th>Telephone</th>
+                          <th>Email</th>
+                          <th>Start date</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Patrick Djouonang</td>
+                          <td> Coordonnateur</td>
+                          <td>69999999</td>
+                          <td>pat@gamil.com</td>
+                          <td>09/09/2018</td>
+
+                        </tr>
+                        <tr>
+                          <td>cesaire FOTSING</td>
+                          <td> Enseignant</td>
+                          <td>69999999</td>
+                          <td>pat@gamil.com</td>
+                          <td>09/09/2018</td>
+
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div><!-- end card-->
+              </div>
+
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h3><i class="fa fa-star-o"></i> Progression des paiements</h3>
+                    Récapitulatif en % de l'évolution des paiments pour le semestre en cours.
+                  </div>
+
+                  <div class="card-body">
+                    <p class="font-600 m-b-5">Inscriptions <span class="text-primary pull-right"><b>95%</b></span></p>
+                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-xs bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95"></div>
+                    </div>
+
+
+
+                    <div class="m-b-20"></div>
+
+                    <p class="font-600 m-b-5">premières tranche <span class="text-info pull-right"><b>70%</b></span></p>
+                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-xs bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70"></div>
+                    </div>
+
+                    <div class="m-b-20"></div>
+
+
+
+                    <p class="font-600 m-b-5">deuxième tranche <span class="text-warning pull-right"><b>65%</b></span></p>
+                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-xs bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="65"></div>
+                    </div>
+
+                    <div class="m-b-20"></div>
+
+                    <p class="font-600 m-b-5">Totalité <span class="text-danger pull-right"><b>55%</b></span></p>
+                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-xs bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="55"></div>
+                    </div>
+
+
+                  </div>
+                  <div class="card-footer small text-muted">Mise à jour 22/10/2018 à 11:59 PM</div>
+                </div><!-- end card-->
+              </div>
+
+
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h3><i class="fa fa-envelope-o"></i> Derniers messages</h3>
+                    Liste des derniers messages reçus.
+                  </div>
+
+                  <div class="card-body">
+
+                    <div class="widget-messages nicescroll" style="height: 400px;">
+                          {% for msg in listmessages %}
+
+                            <a href="">
+                              <div class="message-item">
+                                <div class="message-user-img"><img src="{{asset('bundles/gpadmin/assets/images/avatars/avatar3.png')}}" class="avatar-circle" alt=""></div>
+                                <p class="message-item-user">{{msg.userName}}</p>
+                                <p class="message-item-msg"> {{msg.subject}}</p>
+                                <p class="message-item-date"> {{msg.sendAt|date('d/m/Y')}} à {{msg.sendAt|date('H:i')}}</p>
+                              </div>
+                            </a>
+
+                          {% endfor %}
+
+                  </div>
+                  <div class="card-footer small text-muted">mis à jour à 11:59 PM</div>
+                </div><!-- end card-->
+              </div>
+
+          </div>
+
+
+
+        </div>
+  <!-- END container-fluid -->
+
+</div>
+<!-- END content -->
+
+</div>
+</div>
+<!-- END content-page -->
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{# src/GP/PlatformBundle/Resources/views/Course/updateCourse.html.twig #}
+
+{% extends 'GPAdminBundle::layout.html.twig' %}
+{% block content %}
+
+<div class="content-page">
+
+<!-- Start content -->
+    <div class="content">
+
+      <div class="container-fluid">
+
+        <div class="row">
+              <div class="col-xl-12">
+                  <div class="breadcrumb-holder">
+                      <h1 class="main-title float-left">Modifier un Cours</h1>
+                      <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item">Admin-Puissant</li>
+                        <li class="breadcrumb-item active">Update Course</li>
+                      </ol>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+        </div>
+        <!-- end row -->
+  </div>
+
+  <div class="card text-center">
+      <div class="card-header">
+        Renseigner les informations sur l'unité d'enseignement.
+      </div>
+
+        {{ include("GPPlatformBundle:Course:form.html.twig") }}
+
+      <div class="card-footer text-muted">
+        Seul les enseignants du groupe  peuvent ajouter des cours. La validation est ensuite faite par le coordonnateur !
+      </div>
+    </div>
+
+</div>
+
+<!-- END content -->
+
+</div>
+<!-- END content-page -->
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "GPPlatformBundle::layout.html.twig" %}
+
+
+
+{% block stylesheets %}
+    {{parent()}}
+    {% stylesheets filter='cssrewrite, scssphp'
+      'bundles/app/login/css/util.css'
+      'bundles/app/login/css/main.css'
+     %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+{% endblock %}
+
+
+
+{% block body %}
+<header id="home" class="section pb-0 ">
+
+    <div class="header-text section text-white text-center pb-3 pt-0">
+
+    </div>
+
+</header>
+
+  {% include "@FOSUser/Resetting/request_content.html.twig" %}
+
+{% endblock %}
+
+{% block javascript %}
+      {{parent()}}
+      {% javascripts filter='jsqueeze'
+
+        'bundles/app/login/js/main.js'
+       %}
+          <script type="text/javascript" src="{{ asset_url }}"></script>
+     {% endjavascripts %}
+{% endblock %}

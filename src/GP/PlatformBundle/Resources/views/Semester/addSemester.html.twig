@@ -1,0 +1,54 @@
+{# src/GP/PlatformBundle/Resources/views/Semester/addSemester.html.twig #}
+{% extends 'GPAdminBundle::layout.html.twig' %}
+{% block content %}
+
+<div class="content-page">
+
+<!-- Start content -->
+    <div class="content">
+
+      <div class="container-fluid">
+
+        <div class="row">
+              <div class="col-xl-12">
+                  <div class="breadcrumb-holder">
+                      <h1 class="main-title float-left">Ajouter un Semestre</h1>
+                      <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item">Admin-Puissant</li>
+                        <li class="breadcrumb-item active">add Semester</li>
+                      </ol>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+        </div>
+        <!-- end row -->
+  </div>
+
+  <div class="card text-center">
+      <div class="card-header">
+        Renseigner les dates de lancement et de clôture du semestre au sein du groupe.
+      </div>
+
+        {{ include("GPPlatformBundle:Semester:form.html.twig") }}
+
+      <div class="card-footer text-muted">
+        Seul le coordonnateur du groupe  peut ajouter un semestre !
+      </div>
+    </div>
+
+
+
+</div>
+
+<!-- END content -->
+
+</div>
+<!-- END content-page -->
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{# src/GP/PlatformBundle/Resources/views/Course/addCourse.html.twig #}
+
+{% extends 'GPAdminBundle::layout.html.twig' %}
+{% block content %}
+
+<div class="content-page">
+
+<!-- Start content -->
+    <div class="content">
+
+      <div class="container-fluid">
+
+        <div class="row">
+              <div class="col-xl-12">
+                  <div class="breadcrumb-holder">
+                      <h1 class="main-title float-left">Ajouter un Departement</h1>
+                      <ol class="breadcrumb float-right">
+                        <li class="breadcrumb-item">Admin-Puissant</li>
+                        <li class="breadcrumb-item active">add Sector</li>
+                      </ol>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+        </div>
+        <!-- end row -->
+  </div>
+
+  <div class="card text-center">
+      <div class="card-header">
+        Renseigner les informations sur le departement.
+      </div>
+
+        {{ include("GPPlatformBundle:Sector:form.html.twig") }}
+
+      <div class="card-footer text-muted">
+        Seul les admins peuvent ajouter un departement.
+      </div>
+    </div>
+
+</div>
+
+<!-- END content -->
+
+</div>
+<!-- END content-page -->
+
+{% endblock %}

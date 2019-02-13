@@ -1,0 +1,50 @@
+{% extends 'GPAdminBundle::layout.html.twig' %}
+
+{% block content %}
+
+<div class="content-page">
+
+<!-- Start content -->
+    <div class="content">
+
+      <div class="container-fluid">
+
+        <div class="row">
+              <div class="col-xl-12">
+                  <div class="breadcrumb-holder">
+                      <h1 class="main-title float-left">Liste des Semestres</h1>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+        </div>
+        <!-- end row -->
+      </div>
+
+      <div class="row">
+      {% for semester in listSemesters %}
+          <div class="card-body col-sm-4">
+    								<div class="card" style="width: 20rem;">
+    								  <img class="card-img-top" src="{{asset('bundles/gpadmin/assets/images/sample-image-3.jpg')}}" alt="Card image cap">
+    								  <div class="card-body">
+    									<h4 class="card-title"> {{semester.semesterName}}</h4>
+    									<p class="card-text"> Du {{semester.startDate|date('d/m/Y')}} au {{semester.endDate|date('d/m/Y')}}</p>
+    									<a href="{{path('gp_platform_add_classroom', {'id': semester.id})}}" class="btn btn-primary">Ajouter une nouvelle Classe</a>
+    								  </div>
+    								</div>
+    			</div>
+      {% endfor %}
+      </div>
+
+
+
+
+
+
+
+<!-- END content -->
+
+</div>
+<!-- END content-page -->
+
+
+{% endblock %}

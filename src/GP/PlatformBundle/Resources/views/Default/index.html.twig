@@ -1,0 +1,186 @@
+{# src/PlatformBundle/Resources/views/Default/index.html.twig#}
+
+{% extends 'GPPlatformBundle::layout.html.twig' %}
+
+{% block body %}
+<header id="home" class="section pb-0 ">
+
+    <div class="header-text section text-white text-center pb-0">
+      <div class="container">
+        <h1>Validez toutes vos UEs avec la MGP de vos rêves !</h1>
+        <p class="lead">
+          Nous sommes plus que jamais mobilisés pour votre réussite.
+        </p>
+        <a class="btn btn-primary btn-lg mt-4 mb-5" href="#" role="button">Notre histoire</a>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="main">
+    {% for message in app.flashes('notice') %}
+      <div class="alert  alert-success" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+      </div>
+    {% endfor %}
+
+
+			<!-- Info -->
+			<section class="info section section-gray text-center text-lg-left">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 d-flex justify-content-center">
+							<div class="w-75">
+								<h3>Cours de soutien aux étudiants</h3>
+								<h6 class="mb-3">Maths, Physique, Chimie, Informatique</h6>
+								<p>
+									Avec près de 30 enseigants spécialisés, Le <strong>GROUPE LES PUISSANTS</strong> apporte aux étudiants, organisation,
+                   methodologie, révision de qualité, ... pour la préparation des <strong>contrôles continus</strong> et
+                   <strong>sessions normales</strong>.
+								</p>
+								<a class="btn btn-primary btn-lg mt-4 mb-5 mb-lg-0" href="#" role="button">En savoir plus</a>
+							</div>
+						</div>
+						<div class="col-lg-6 text-center">
+							<img src="{{asset('bundles/gpplatform/assets/img/puissant1.png')}}" class="img-fluid mx-auto" alt="Responsive image">
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+      <section class="testimonials section pt-0">
+				<div class="section section-heading container text-center">
+					<div class="row">
+						<div class="col-lg-12">
+							<h3 class="mb-2">Ce que disent nos étudiants</h3>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+
+					<div class="row mb-5">
+						<div class="col-lg-6">
+							<div class="testimonial w-75 mx-auto mb-5 mb-lg-0">
+								<p class="bg-white mx-auto mb-5 p-4 text-justify">
+									J'ai connu le <strong>GROUPE LES PUISSANTS</strong> en 2014 grâce à un ami qui y était déjà. Dès mon arrivé, j'ai été
+                  impréssionnée par le niveau de sérieux, de rigeur et la qualité des enseignants. ils allaient parfois jusqu'à controler les devoirs comme
+                  au Lycée (rire). Le groupe m'a beaucoup apporté car grâce à ce groupe, je suis aujourd'hui en Master 2 Mécanique, Matériaux et Structure et en même temps
+                  élève ingénieur à l'Ecole Nationale Supérieure des Travaux Publics. Je recommande toujours et sans réserve le groupe à mes proches.
+								</p>
+								<div class="person d-flex align-items-center">
+									<img src="{{asset('bundles/gpplatform/assets/img/audrey.jpg')}}" class="img-fluid" alt="Audrey TABET">
+									<div class="px-3">
+										<h5 class="m-0">Audrey TABET</h5>
+										<span class="text-muted">Ancienne étudiante du groupe</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="testimonial w-75 mx-auto">
+								<p class="bg-white mx-auto mb-5 p-4 text-justify">
+									Après l'obtention de mon baccalauriatC avec mention en 2013, j'ai intégré l' Université de Yaoundé 1 où j'ai vu naître le  <strong>GROUPE LES PUISSANTS</strong>;
+                  j'y ai adhéré tout d'abord comme étudiant jusqu'à l'obtention de ma licence avec une moyenne de 13,50/20 et classé 2 ème en 2016. Je tiens à préciser que j'ai été le
+                  premier étudiant entièrement formé par le groupe à occuper dès 2016 la fonction d'enseignant, poste que j'ai assumé jusqu'en octobre 2018 avant de voyager pour la Maroc
+                  où je suis actuellement une formation en aéronautique à l'Ecole Supérieure de l'Aéronautique et de Haute Technologie (AEROSUP). Cette formatioon devrait se terminer par une spécialisation en France.
+								</p>
+								<div class="person d-flex align-items-center">
+									<img src="{{asset('bundles/gpplatform/assets/img/steve.jpg')}}" class="img-fluid" alt="Steve KAMTE">
+									<div class="px-3">
+										<h5 class="m-0">Steve KAMTE</h5>
+										<span class="text-muted">Ancien étudiant du groupe</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+          <div class="row mb-5">
+            <div class="col-lg-6">
+              <div class="testimonial w-75 mx-auto">
+                <p class="bg-white mx-auto mb-5 p-4 text-justify">
+                  Mon histoire avec le groupe <strong>GROUPE LES PUISSANTS</strong> commence en octobre 2014 quand j'étais en première année à l'université de Yaoundé 1. J'intègre le
+                  groupe grâce aux tracs distribués à l'amphithéâtre. J'y suis allé pour la première fois juste par simple curiosité, mais une fois arrivé, j'ai été impressionné par le
+                  rythme de travail, la qualité des enseignements et le bon encadrement de nos enseignants. Grâce à ce groupe, j'ai épousé le rythme de travail et j'ai aussi trouvé
+                  l'axe positif du champ magnétique de l'université de Yaoundé 1. Ceci m'a permis d'avoir ma licence avec <strong>mention</strong>, et de <strong>réussir la même année</strong>
+                  le concours de l'Ecole Nationale Supérieure Polytechnique de Yaoundé. Aujourd'hui en 4 ème année Génie industriel, je contribue sans relache à l'avancement du groupe et je le
+                  recommande à toutes mes connaissances/proches entrants à l'Université de Yapundé 1.
+
+                </p>
+                <div class="person d-flex align-items-center">
+                  <img src="{{asset('bundles/gpplatform/assets/img/oumarou.jpg')}}" class="img-fluid" alt="Mohamadou Oumarou">
+                  <div class="px-3">
+                    <h5 class="m-0">Mohamadou Oumarou</h5>
+                    <span class="text-muted">Ancien étudiant du groupe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="testimonial w-75 mx-auto mb-5 mb-lg-0">
+                <p class="bg-white mx-auto mb-5 p-4 text-justify">
+                  C'est pendant ma troisième année en Physique à l'Université de Yaoundé 1 en 2015 que j'ai fait la connaissance du groupe <strong>GROUPE LES PUISSANTS</strong>.  Un ami qui y était depuis le niveau  m'a conseillé d'y aller afin d'optimiser
+                  mes notes de Licence. Dès mon arrivée au groupe, j'ai confirmé ses dires. J'ai été impréssionnée par le niveau de sérieux et la qualité des enseignants. Outre la rigueur et
+                  la compétence des enseignants, une ambiance séreine et conviviale y reignait. Je m'y suis donc installé et a pu, grâce au groupe, valider ma Licence en 2015.
+                </p>
+                <div class="person d-flex align-items-center">
+                  <img src="{{asset('bundles/gpplatform/assets/img/isee.jpg')}}" class="img-fluid" alt="Audrey TABET">
+                  <div class="px-3">
+                    <h5 class="m-0">Isee BADOUET</h5>
+                    <span class="text-muted">Ancienne étudiante du groupe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-lg-6">
+              <div class="testimonial w-75 mx-auto mb-5 mb-lg-0">
+                <p class="bg-white mx-auto mb-5 p-4 text-justify">
+                  <strong>Puissante</strong> c'est le mot que j'utilise pour me qualifier jusqu'à ce jour depuis ma rencontre avec le  <strong>GROUPE LES PUISSANTS</strong> en 2014. J'ai connu ce groupe par le
+                  biais d'un camarade alors que j'étais en 2 ème année Physique à l'universite de Yaoundé 1 et coincée par une session normale de Mécanique du solide. Depuis lors, ce groupe par son travail, sa rigueur, ses encouragements
+                  et son environnement fimilial m'a donné le courage et la compétence de me démarquer en tant que <strong>Puissante</strong> dans toutes mes réalisations. Aujourd'hui grâce au <strong>GROUPE LES PUISSANTS</strong> j'ai
+                  une famille intéllectuelle et je continue à mettre la rigueur et le sérieux acquis dans mes études actuelles que je poursuis en tant qu'élève ingénieur en technologie de l'information à Northern Virginia aux USA.
+                </p>
+                <div class="person d-flex align-items-center">
+                  <img src="{{asset('bundles/gpplatform/assets/img/lauriane.jpg')}}" class="img-fluid" alt="Lauriane DJOUMOU">
+                  <div class="px-3">
+                    <h5 class="m-0">Lauriane DJOUMOU</h5>
+                    <span class="text-muted">Ancienne étudiante du groupe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="testimonial w-75 mx-auto">
+                <p class="bg-white mx-auto mb-5 p-4 text-justify">
+                  J’ai intégré le Groupe les Puissants en 2015 via la publicité passée incontestable au sein du campus de L’UYI, entant qu’étudiant en filière Mathématiques dans le seul but de quantifier les unités d’enseignement
+                   physiques, je dois vous dire que je ne trouvais pas ce groupe à la hauteur de le faire car la Physique Quantique pour moi était un pire cauchemar. Je me rappel tous les encouragements de toutes sortes par lesquels
+                   ce groupe m’a soutenu dans mon apprentissage quotidien, son esprit de Rigueur, d’Equité (Puisque j’étais mathématiciens parmi tant de physiciens), d’Evaluation et surtout du travail ce qui entrainent non seulement
+                   ma validation en Physique Quantique au premier semestre mais aussi ma validation en Electrostatique au second semestre. Deux ans plus tard, me voilà étudiant du second cycle, j’intègre de nouveau le groupe Les
+                   Puissants cette fois ci en tant que Enseignant de Mathématiques, puis-je vous dire en toute sincérité que ce groupe m’a formé et continu à le faire dans le domaine d’enseignement professionnelle, sans tout fois oublier
+                   le coté de se faire largement et suffisamment la poche (rire).
+                </p>
+                <div class="person d-flex align-items-center">
+                  <img src="{{asset('bundles/gpplatform/assets/img/theo.jpg')}}" class="img-fluid" alt="Steve KAMTE">
+                  <div class="px-3">
+                    <h5 class="m-0">Théodore MFOUAPON</h5>
+                    <span class="text-muted">Ancien étudiant du groupe</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+				</div>
+			</section>
+
+    
+    </div>
+{% endblock %}

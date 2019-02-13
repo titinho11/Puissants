@@ -1,0 +1,10 @@
+gp_admin_homepage:
+    path:     /dashboard
+    defaults:
+        _controller: GPAdminBundle:Dashboard:dashboard
+
+# Handle received messages
+gp_admin_read_msg:
+    path:     /read-message/{id}
+    defaults:
+        _controller: GPAdminBundle:Dashboard:dashboard

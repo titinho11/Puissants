@@ -1,0 +1,14 @@
+# To get started with security, check out the documentation:
+imports:
+    - { resource: "@AppBundle/Resources/config/security.yml"}
+
+security:
+   role_hierarchy:
+      ROLE_ETUDIANT: ROLE_USER
+      ROLE_ADMIN: ROLE_USER
+
+   access_control:
+      - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+      - { path: ^/admin/, role: ROLE_ADMIN }
